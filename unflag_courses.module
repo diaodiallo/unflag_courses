@@ -1,0 +1,70 @@
+<?php
+
+use Drupal\flag\Controller;
+use \Drupal\views\EntityViewsDataInterface;
+use  \Drupal\views\EntityViewsData;
+use Drupal\views\ViewExecutable;
+use Drupal\views;
+use \Drupal\views\Plugin\views\field\FieldPluginBase;
+use \Drupal\Core\Url;
+/*
+/**
+ * Implements hook_views_pre_render().
+ */
+//\Drupal::logger('Unflag_coureses')->info('The module is working');
+/*
+function unflag_courses_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'training_list_users')) {
+
+    //ATTACH A CSS LIBRARY
+    //$view->element['#attached']['library'][] = 'unflag_courses/unflag_courses_view';
+
+    $field = $view->field;
+    $view->save();
+
+
+    //GET URL
+    $url = $view->getUrl()->toString();
+
+  }
+} */
+/*
+
+function unflag_courses_views_post_execute(ViewExecutable $view) {
+
+  // When using full pager, disable any time-based caching if there are fewer
+  // than 10 results.
+  $userId = \Drupal::currentUser()->id();
+  $refresh = 'https://fpntcd8.lndo.site/user/' . $userId . '#trainingusers';
+  $url = $view->getUrl()->toString();
+  $course = $view->getUrl()->getRouteParameters();
+
+  if (isset($view) && ($view->storage->id() == 'training_list_users')) {
+
+
+    \Drupal::logger('Unflag_courses')->notice('The url is = '.$url);
+    \Drupal::logger('Unflag_courses')->notice('User id is = '.$userId);
+    \Drupal::logger('Unflag_courses')->notice('URL redirect is = '.$refresh);
+
+  }
+
+}
+
+
+
+/*function unflag_courses_views_data_alter(&$data) {
+  // debug($data['node']);
+  $data['node']['actions'] = array(
+    'title' => t('Actions'),
+    'help' => t('Clickable links to actions a user may perform on a Node.'),
+    'field' => array(
+      'handler' => 'view_actions_views_handler_field_actions',
+      'group' => 'Content',
+      'click sortable' => FALSE,
+    ),
+  );
+
+  $viewTest = new ViewExecutable();
+
+  $myView = getView()
+} */

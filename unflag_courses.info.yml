@@ -1,0 +1,5 @@
+name: Unflag courses
+type: module
+description: Unflag a list of courses to a user
+core: 8.x
+package: Custom

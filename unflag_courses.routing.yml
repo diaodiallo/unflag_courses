@@ -1,0 +1,7 @@
+unflag_courses:
+  path: '/course/remove/{user_id}/{entity_id}'
+  defaults:
+    _controller: 'Drupal\unflag_courses\Controller\UnflagCoursesController::remove'
+    _title: 'remove course'
+  requirements:
+    _permission: 'access content'
